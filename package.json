@@ -1,0 +1,36 @@
+{
+  "name": "minhas-tarefas",
+  "version": "1.0.0",
+  "description": "Aplicativo de lista de tarefas",
+  "main": "main.js",
+  "author": "Mande121",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^39.8.10",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.mande121.minhastarefas",
+    "productName": "Minhas Tarefas",
+    "directories": {
+      "output": "dist"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Mande121",
+        "repo": "Gerenciador-de-tarefas-interativo"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.9"
+  }
+}

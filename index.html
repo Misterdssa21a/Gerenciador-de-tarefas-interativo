@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- Segurança do Electron -->
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self';"
+    >
+
+    <title>Minhas Tarefas</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header class="header">
+
+            <div>
+                <span class="greeting">ORGANIZAÇÃO</span>
+
+                <h1>Minhas tarefas</h1>
+
+                <p id="date"></p>
+            </div>
+
+            <div class="header-icon">
+                ✓
+            </div>
+
+        </header>
+
+
+        <section class="dashboard">
+
+            <div class="progress-card">
+
+                <div class="progress-info">
+
+                    <div>
+                        <span>Seu progresso</span>
+                        <strong id="progressText">0%</strong>
+                    </div>
+
+                    <p id="motivation">
+                        Comece adicionando uma tarefa!
+                    </p>
+
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat-card">
+                    <span>Total</span>
+                    <strong id="totalTasks">0</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Concluídas</span>
+                    <strong id="completedTasks">0</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Pendentes</span>
+                    <strong id="pendingTasks">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="task-section">
+
+            <div class="section-title">
+
+                <div>
+                    <span>LISTA</span>
+                    <h2>Nova tarefa</h2>
+                </div>
+
+            </div>
+
+
+            <div class="input-container">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="O que você precisa fazer?"
+                    autocomplete="off"
+                >
+
+                <button id="addButton">
+                    Adicionar
+                </button>
+
+            </div>
+
+
+            <div class="list-header">
+
+                <h2>Suas tarefas</h2>
+
+                <button id="clearCompleted">
+                    Limpar concluídas
+                </button>
+
+            </div>
+
+
+            <ul id="taskList"></ul>
+
+
+            <div id="emptyState" class="empty-state">
+
+                <div class="empty-icon">
+                    ✓
+                </div>
+
+                <h3>Nenhuma tarefa por aqui</h3>
+
+                <p>
+                    Adicione uma nova tarefa para começar.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <span>Organize seu dia</span>
+            <span>•</span>
+            <span>Uma tarefa de cada vez</span>
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
