@@ -21,7 +21,7 @@
   },
 
   "build": {
-    "appId": "com.misterdssa21a.minhastarefas",
+    "appId": "com.mande121.minhastarefas",
     "productName": "Minhas Tarefas",
 
     "directories": {
